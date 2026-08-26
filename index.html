@@ -1,14 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bucher Systems LLC</title>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucher Systems LLC</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --fg: #f5f6f8;
+      --muted: #9aa3af;
+      --accent: #f5a623;
+      --card: #171a21;
+      --border: #242833;
+    }
 
-  <h1>Bucher Systems LLC</h1>
-<h2>This is another message for the website to display.</h2>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-</body>
-</html>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .brand span { color: var(--accent); }
+
+    main { flex: 1; display: flex; align-items: center; padding: 80px 0; }
+
+    .hero { text-align: left; }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent { color: var(--accent); }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #0f1115;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 8px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .cta:hover { transform: translateY(-2px); opacity: 0.92; }
+
+    .apps {
+      margin-top: 64px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      transition: border-color 0.15s ease;
+    }
+    .app-card:hover { border-color: var(--accent); }
+
+    .app-card h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .app-card p { color: var(--muted); font-size: 0.95rem; }
+    .app-card a { color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    footer a { color: var(--muted);
